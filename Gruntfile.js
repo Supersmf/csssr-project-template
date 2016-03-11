@@ -76,17 +76,18 @@ module.exports = function(grunt) {
 		    }
 		},
 
-		// jade: {
-  // 			compile: {
-  //   		  options: {
-  //     			data: {
-  //       			debug: false
-  //     			}
-  //   		  },
-  //   		files: {
-  //     			"/": ["*.jade"]
-  //   		}
-  // 		},
+		jade: {
+		  debug: {
+		    options: {
+		      data: {
+		        debug: false,
+		      }
+		    },
+		    files: {
+		      "index.html": "index.jade"
+		    }
+		  }
+		},
 
 		watch: {
 		    // scripts: {
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
 		    // },
 		    html: {
 		    	files: ['*.jade'],
-		    	tasks: ['contrib-jade', 'watch'],
+		    	tasks: ['jade', 'watch'],
 		    	options: {
 			        spawn: false,
 			        event: ['all'],
@@ -135,8 +136,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-csscomb');
+	grunt.loadNpmTasks('grunt-contrib-jade');
 
-	grunt.registerTask('default', ['less', 'ftp_push', 'imagemin', 'uglify', 'watch', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('default', ['jade', 'less', 'ftp_push', 'imagemin', 'uglify', 'watch', 'autoprefixer', 'csscomb']);
 	grunt.registerTask('start', ['less', 'contrib-jade']);
 
 };
