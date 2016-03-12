@@ -6,6 +6,7 @@
 @gray-text: #3d3d3d;
 @answer-text: #231f20;
 @main-color: #2f1b15;
+@link-color: #014f98;
 @main-bkg: url(../img/bkg.png) repeat-y center;
 
 .center(){
@@ -43,7 +44,6 @@ header{
 		font-weight: 300;
 
 		&:first-child{
-			// background: #2c1108 url(../img/logo.png) no-repeat center;
 		}
 
 		&:last-child{
@@ -89,7 +89,7 @@ header{
 				font-family: 'Courier new';
 				font-size: 3rem;
 				font-weight: 300;
-				border-bottom: 2px solid @main-color;
+				background: url(../img/border.png) repeat-x bottom;
 			    order: 0;
 			    flex: 1 1 auto;
 			    align-self: auto;
@@ -115,6 +115,7 @@ header{
 
 		a{
 			margin-right: 1.5rem;
+			color: @link-color;
 		}
 
 		input{
@@ -171,7 +172,10 @@ header{
 			input{
 				display: none;
 
-				& + label span{
+				& + label{
+				cursor: pointer;
+
+				span{
 					display: inline-block;
 					width: 2.4rem;
 					height: 2.7rem;
@@ -180,23 +184,61 @@ header{
 					background: url(../img/check.png) no-repeat left bottom;
 					cursor: pointer;
 				}
+			}
 
-				&:checked{
+			&:checked{
 
-					& + label span{
-						background: url(../img/check.png) no-repeat right bottom;
-					}
+				& + label span{
+					background: url(../img/check.png) no-repeat right bottom;
 				}
+			}
 			}
 		}
 
 		.java{
+			margin: 8.5rem auto;
 
+			input{
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 }
 
 footer{
 	margin: 6rem;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+
+	span{
+		display: block;
+	    float: left;
+	    margin: 0;
+	    padding-top: 5rem;
+	    color: @main-color;
+	    order: 0;
+	    flex: 0 1 auto;
+	    align-self: auto;
+    }
+
+	p{
+	    display: inline-block;
+		padding: 3rem 1.5rem 1rem 1.5rem;
+	    margin-left: 1.5rem;
+		margin: 0;
+		font-family: 'Courier new';
+		font-size: 3rem;
+		font-weight: 300;
+		background: url(../img/border.png) repeat-x bottom;
+	    order: 0;
+	    flex: 0 0 auto;
+	    align-self: auto;
+	    color: @answer-text;
+	}
 }
 

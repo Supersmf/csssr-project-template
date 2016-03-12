@@ -101,7 +101,7 @@ header p
     padding-left: 1.5rem;
 
     color: #231f20;
-    border-bottom: 2px solid #2f1b15;
+    background: url(../img/border.png) repeat-x bottom;
 
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
@@ -146,6 +146,8 @@ header p
 .content .stud a
 {
     margin-right: 1.5rem;
+
+    color: #014f98;
 }
 .content .stud input
 {
@@ -234,7 +236,91 @@ header p
 {
     background: url(../img/check.png) no-repeat right bottom;
 }
+.content .practice .java
+{
+    margin: 8.5rem auto;
+}
+.content .practice .java input
+{
+    display: block;
+
+    width: 100%;
+}
 footer
 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
     margin: 6rem;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+            align-content: stretch;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+            align-items: flex-start;
+}
+footer span
+{
+    display: block;
+    float: left;
+
+    margin: 0;
+    padding-top: 5rem;
+
+    color: #2f1b15;
+
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+            align-self: auto;
+}
+footer p
+{
+    font-family: 'Courier new';
+    font-size: 3rem;
+    font-weight: 300;
+
+    display: inline-block;
+
+    margin: 0;
+    margin-left: 1.5rem;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+
+    color: #231f20;
+    background: url(../img/border.png) repeat-x bottom;
+
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+            align-self: auto;
 }
