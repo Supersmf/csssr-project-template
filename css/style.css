@@ -1,0 +1,240 @@
+@import url(normalize.css);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+html
+{
+    font-size: 62.5%;
+
+    background: #797979;
+}
+body
+{
+    font-family: 'PT sans';
+    font-size: 2.243rem;
+    font-weight: 600;
+
+    box-sizing: border-box;
+    max-width: 100rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 5rem;
+
+    color: #2f1b15;
+    background: url(../img/bkg.png) repeat-y center;
+}
+header div
+{
+    font-size: 1rem;
+    font-weight: 300;
+
+    display: inline-block;
+
+    background-blend-mode: normal;
+}
+header div:last-child
+{
+    float: right;
+}
+header p
+{
+    margin-top: -1rem;
+
+    text-align: center;
+}
+.content
+{
+    margin: 6rem;
+}
+.content img
+{
+    display: block;
+
+    margin: 1rem auto;
+}
+.content ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.content ul li
+{
+    font-size: 2.243rem;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: row;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+            align-content: stretch;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+            align-items: flex-start;
+}
+.content ul li p
+{
+    font-family: 'Courier new';
+    font-size: 3rem;
+    font-weight: 300;
+
+    display: block;
+
+    margin: 0;
+    margin-left: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+
+    color: #231f20;
+    border-bottom: 2px solid #2f1b15;
+
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+            align-self: auto;
+}
+.content ul li span
+{
+    display: block;
+    float: left;
+
+    margin: 0;
+    padding-top: 5rem;
+
+    color: #2f1b15;
+
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+            align-self: auto;
+}
+.content .stud
+{
+    display: block;
+
+    margin: 5rem auto;
+}
+.content .stud a
+{
+    margin-right: 1.5rem;
+}
+.content .stud input
+{
+    display: none;
+}
+.content .stud input + label
+{
+    cursor: pointer;
+}
+.content .stud input + label span
+{
+    display: inline-block;
+
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: .5rem;
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    background: url(../img/radio.png) no-repeat left top;
+}
+.content .stud input:checked + label span
+{
+    background: url(../img/radio.png) no-repeat right top;
+}
+.content .practice h3
+{
+    margin: 1.5rem auto;
+}
+.content .practice p
+{
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    color: #3d3d3d;
+}
+.content .practice p:before
+{
+    font-size: 3.6rem;
+
+    float: left;
+
+    margin-right: 1rem;
+
+    content: '*';
+}
+.content .practice .boxes
+{
+    font-size: 2.1rem;
+
+    white-space: nowrap;
+
+    -webkit-column-width: auto;
+       -moz-column-width: auto;
+            column-width: auto;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 4rem;
+       -moz-column-gap: 4rem;
+            column-gap: 4rem;
+}
+.content .practice .boxes input
+{
+    display: none;
+}
+.content .practice .boxes input + label
+{
+    cursor: pointer;
+}
+.content .practice .boxes input + label span
+{
+    display: inline-block;
+
+    width: 2.4rem;
+    height: 2.7rem;
+    margin: .5rem;
+
+    cursor: pointer;
+    vertical-align: bottom;
+
+    background: url(../img/check.png) no-repeat left bottom;
+}
+.content .practice .boxes input:checked + label span
+{
+    background: url(../img/check.png) no-repeat right bottom;
+}
+footer
+{
+    margin: 6rem;
+}

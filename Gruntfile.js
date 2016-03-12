@@ -79,27 +79,21 @@ module.exports = function(grunt) {
 		jade: {
 		  debug: {
 		    options: {
+		      pretty: true,
 		      data: {
 		        debug: false,
 		      }
 		    },
 		    files: {
-		      "index.html": "index.jade"
+		      "index.html": "*.jade"
 		    }
 		  }
 		},
 
 		watch: {
-		    // scripts: {
-		    //     files: ['js/*.js'],
-		    //     tasks: ['uglify'],
-		    //     options: {
-		    //         spawn: false,
-		    //     },
-		    // },
 		    html: {
 		    	files: ['*.jade'],
-		    	tasks: ['jade', 'watch'],
+		    	tasks: ['newer:jade', 'watch'],
 		    	options: {
 			        spawn: false,
 			        event: ['all'],
@@ -137,8 +131,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-csscomb');
 	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-newer');
 
-	grunt.registerTask('default', ['jade', 'less', 'ftp_push', 'imagemin', 'uglify', 'watch', 'autoprefixer', 'csscomb']);
+	grunt.registerTask('default', ['newer:jade', 'less', 'ftp_push', 'imagemin', 'uglify', 'watch', 'autoprefixer', 'csscomb']);
 	grunt.registerTask('start', ['less', 'contrib-jade']);
 
 };

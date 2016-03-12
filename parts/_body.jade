@@ -1,0 +1,51 @@
+body
+	header
+		.logo
+			img(src="img/logo.png")
+			p Секретный архив учреждения
+		#sekret
+			img(src="img/sekret.png")
+
+	.content
+		img(src="img/delo.png")
+
+		//- Создаем массив с данныйми. Пара "вопрос:ответ"
+		- var quest = {'Полное ФИО':'Батицкая Алена Алексеевна','Год рождения':'1988','Место жительства':'Россия, Санкт-Петербург','Скайп':'solarrust','Почта':'batickaya.a@gmail.com'}
+
+		ul.anketa
+			each questAnswer, questLabel in quest
+				li
+					span= questLabel + ' '
+					p= questAnswer
+
+		label.stud Выпускник&nbsp;
+				a(href="http://htmlacademy.ru") htmlacademy.ru
+				input(type="radio" name="stud" value="yes" id="s1")
+				label(for="s1")
+					span
+					| Да
+
+				input(type="radio" name="stud" value="no" id="s2" checked)
+				label(for="s2")
+					span
+					| Нет
+		.practice
+			h3 Практические навыки
+			p.
+				Отемтьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+
+			//- Создаем массив с данныйми. Пара "лейбл чекбокса:значение атрибута checked"
+			- var boxes = {'Методология БЭМ':false, 'jQuery':false, 'Использую GRUNT':true, 'HAML':false, 'SASS':false, 'LESS':true, 'CoffeeScript':false, 'Jade':true, 'Stylus':false, 'Знаю (изучаю) Angular':true, 'Верстка под Android':false, 'Верстка под iOS':true, 'Верстка под Windows Phone':false, 'Верстка рассылок':false, 'Адаптивная верстка':true,  'Использую Dropbox':false, 'Использую Gmail':true, 'Использую GitHub':true}
+
+			.boxes
+				- var i = 1
+				each checked, boxLabel in boxes
+					.checkGroup
+						input(type="checkbox" id= i name= boxLabel checked= checked)
+						label(for= i++)
+							span
+							= boxLabel
+
+			.java
+				h3 Уровень владения JavaScript
+				input(type="range" min="1" max="4" value="2")

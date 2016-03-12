@@ -1,0 +1,202 @@
+@import url(normalize.css);
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+@gray: #797979;
+@gray-text: #3d3d3d;
+@answer-text: #231f20;
+@main-color: #2f1b15;
+@main-bkg: url(../img/bkg.png) repeat-y center;
+
+.center(){
+	margin: 0 auto;
+}
+
+.PT(){
+	font-family: 'PT sans';
+	font-weight: 600;
+	font-size: 2.243rem;
+}
+
+html{
+	background: #797979;
+	font-size: 62.5%;
+}
+
+body{
+	background: @main-bkg;
+	.center;
+	max-width: 100rem;
+	height: auto;
+	padding: 5rem;
+    box-sizing: border-box;
+    .PT;
+    color: @main-color;
+}
+
+header{
+
+	div{
+		display: inline-block;
+		background-blend-mode: normal;
+		font-size: 1rem;
+		font-weight: 300;
+
+		&:first-child{
+			// background: #2c1108 url(../img/logo.png) no-repeat center;
+		}
+
+		&:last-child{
+			float: right;
+		}
+	}
+
+	p{
+		text-align: center;
+		margin-top: -1rem;
+	}
+}
+
+.content{
+	margin: 6rem;
+
+	img{
+		display: block;
+		margin: 1rem auto;
+	}
+
+	ul{
+		list-style: none;
+    	padding: 0;
+    	margin: 0;
+
+		li{
+			font-size: 2.243rem;
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		    align-content: stretch;
+		    align-items: flex-start;
+
+			p{
+			    display: block;
+				padding-top: 3rem;
+			    padding-left: 1.5rem;
+			    padding-bottom: 1rem;
+			    margin-left: 1.5rem;
+				margin: 0;
+				font-family: 'Courier new';
+				font-size: 3rem;
+				font-weight: 300;
+				border-bottom: 2px solid @main-color;
+			    order: 0;
+			    flex: 1 1 auto;
+			    align-self: auto;
+			    color: @answer-text;
+			}
+
+			span{
+				display: block;
+			    float: left;
+			    margin: 0;
+			    padding-top: 5rem;
+			    color: @main-color;
+			    order: 0;
+			    flex: 0 1 auto;
+			    align-self: auto;
+			}
+		}
+	}
+
+	.stud{
+		display: block;
+		margin: 5rem auto;
+
+		a{
+			margin-right: 1.5rem;
+		}
+
+		input{
+			display: none;
+
+			& + label{
+				cursor: pointer;
+
+				span{
+					display: inline-block;
+					width: 2.7rem;
+					height: 2.7rem;
+					margin: .5rem;
+					vertical-align: middle;
+					background: url(../img/radio.png) no-repeat left top;
+					cursor: pointer;
+				}
+			}
+
+			&:checked{
+
+				& + label span{
+					background: url(../img/radio.png) no-repeat right top;
+				}
+			}
+		}
+	}
+
+	.practice{
+		h3{
+			margin: 1.5rem auto
+		}
+
+		p{
+			font-weight: 300;
+			font-size: 1.4rem;
+			color: @gray-text;
+
+			&:before{
+				content: "*";
+				font-size: 3.6rem;
+				float: left;
+				margin-right: 1rem;
+			}
+		}
+
+		.boxes{
+			column-width: auto;
+			column-count: 3;
+			column-gap: 4rem;
+			white-space: nowrap;
+			font-size: 2.1rem;
+
+			input{
+				display: none;
+
+				& + label span{
+					display: inline-block;
+					width: 2.4rem;
+					height: 2.7rem;
+					margin: .5rem;
+					vertical-align: bottom;
+					background: url(../img/check.png) no-repeat left bottom;
+					cursor: pointer;
+				}
+
+				&:checked{
+
+					& + label span{
+						background: url(../img/check.png) no-repeat right bottom;
+					}
+				}
+			}
+		}
+
+		.java{
+
+		}
+	}
+}
+
+footer{
+	margin: 6rem;
+}
+
