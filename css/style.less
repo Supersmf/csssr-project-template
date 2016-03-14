@@ -44,6 +44,7 @@ header{
 		font-weight: 300;
 
 		&:first-child{
+			margin-top: 1rem;
 		}
 
 		&:last-child{
@@ -58,17 +59,20 @@ header{
 }
 
 .content{
-	margin: 6rem;
+	margin: 5.5rem;
 
 	img{
 		display: block;
 		margin: 1rem auto;
+		margin-left: 26rem;
+		margin-bottom: 2.5rem;
 	}
 
 	ul{
 		list-style: none;
     	padding: 0;
-    	margin: 0;
+    	margin: 3rem auto;
+    	margin-top: 7rem;
 
 		li{
 			font-size: 2.243rem;
@@ -78,29 +82,36 @@ header{
 		    justify-content: flex-start;
 		    align-content: stretch;
 		    align-items: flex-start;
+		    margin-top: 1rem;
 
 			p{
 			    display: block;
-				padding-top: 3rem;
 			    padding-left: 1.5rem;
-			    padding-bottom: 1rem;
-			    margin-left: 1.5rem;
-				margin: 0;
+			    margin-left: 2rem;
+				margin-top: -20px;
 				font-family: 'Courier new';
 				font-size: 3rem;
 				font-weight: 300;
-				background: url(../img/border.png) repeat-x bottom;
 			    order: 0;
 			    flex: 1 1 auto;
 			    align-self: auto;
 			    color: @answer-text;
+
+			    &:after{
+					display: block;
+					content: " ";
+					width: 100%;
+					height: 5px;
+					background: url(../img/border.png) repeat-x bottom;
+					margin-top: .5rem;
+					margin-left: -1.5rem;
+			    }
 			}
 
 			span{
 				display: block;
 			    float: left;
 			    margin: 0;
-			    padding-top: 5rem;
 			    color: @main-color;
 			    order: 0;
 			    flex: 0 1 auto;
@@ -111,11 +122,12 @@ header{
 
 	.stud{
 		display: block;
-		margin: 5rem auto;
 
 		a{
 			margin-right: 1.5rem;
 			color: @link-color;
+			text-decoration: none;
+			border-bottom: 1px solid @link-color;
 		}
 
 		input{
@@ -128,7 +140,7 @@ header{
 					display: inline-block;
 					width: 2.7rem;
 					height: 2.7rem;
-					margin: .5rem;
+					margin: 1rem;
 					vertical-align: middle;
 					background: url(../img/radio.png) no-repeat left top;
 					cursor: pointer;
@@ -145,29 +157,36 @@ header{
 	}
 
 	.practice{
+		margin: 5rem auto;
+
 		h3{
-			margin: 1.5rem auto
+			margin: 1.5rem auto;
+			font-size: 2.243rem;
 		}
 
 		p{
 			font-weight: 300;
 			font-size: 1.4rem;
 			color: @gray-text;
+			margin: 1rem;
 
 			&:before{
 				content: "*";
 				font-size: 3.6rem;
 				float: left;
-				margin-right: 1rem;
+				margin-right: .5rem;
+			    margin-top: -0.5rem;
+			    margin-left: .5rem;
 			}
 		}
 
 		.boxes{
 			column-width: auto;
 			column-count: 3;
-			column-gap: 4rem;
+			column-gap: normal;
 			white-space: nowrap;
 			font-size: 2.1rem;
+			padding: 1rem 0;
 
 			input{
 				display: none;
@@ -197,10 +216,80 @@ header{
 
 		.java{
 			margin: 8.5rem auto;
+			padding: 0 1.5rem;
 
-			input{
-				display: block;
+			h3{
+				margin: 3rem auto;
+			}
+
+			span{
+				font-size: 1.3rem;
+				max-width: 17rem;
+				display: inline-block;
+
+				&:before{
+					content: " ";
+				    display: block;
+				    height: 2rem;
+				    width: 2px;
+				    background: @main-color;
+				    margin-top: -11px;
+				}
+
+				&:nth-of-type(2){
+					position: absolute;
+					left: 32.5%;
+
+					&:before{
+						height: 1rem;
+						margin-bottom: 1rem;
+					}
+				}
+
+				&:nth-of-type(3){
+					position: absolute;
+					left: 51.8%;
+
+					&:before{
+						height: 1rem;
+						margin-bottom: 1rem;
+					}
+				}
+
+				&:last-of-type{
+					position: absolute;
+					left: 69.23%;
+
+					&:before{
+						position: relative;
+						left: 96.5%;
+					}
+				}
+			}
+
+			input[type="range"]{
+				-webkit-appearance: none;
 				width: 100%;
+				background: transparent;
+ 				border-color: transparent;
+ 				color: transparent;
+ 				background: url(../img/border.png) repeat-x center;
+ 				display: block;
+ 				margin: auto;
+
+				&:focus{
+					outline: none;
+				}
+
+				&::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					background: url(../img/tres.png) no-repeat center;
+					border: none;
+					width: 1.5rem;
+					height: 1.5rem;
+					cursor: pointer;
+					margin-bottom: 1.5rem;
+				}
 			}
 		}
 	}
@@ -219,7 +308,6 @@ footer{
 		display: block;
 	    float: left;
 	    margin: 0;
-	    padding-top: 5rem;
 	    color: @main-color;
 	    order: 0;
 	    flex: 0 1 auto;
@@ -227,18 +315,19 @@ footer{
     }
 
 	p{
-	    display: inline-block;
-		padding: 3rem 1.5rem 1rem 1.5rem;
-	    margin-left: 1.5rem;
-		margin: 0;
+	    display: block;
+	    padding: 0 1.5rem;
+	    margin-left: 2rem;
+		margin-top: -20px;
 		font-family: 'Courier new';
 		font-size: 3rem;
 		font-weight: 300;
 		background: url(../img/border.png) repeat-x bottom;
 	    order: 0;
-	    flex: 0 0 auto;
+	    flex: 0 1 auto;
 	    align-self: auto;
 	    color: @answer-text;
+	    line-height: 155%;
 	}
 }
 
