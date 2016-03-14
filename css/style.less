@@ -281,8 +281,47 @@ header{
 					outline: none;
 				}
 
+				&::-moz-range-track {
+					-moz-appearance: none;
+					width: 100%;
+					background: transparent;
+	 				border-color: transparent;
+	 				color: transparent;
+	 				background: url(../img/border.png) repeat-x center;
+	 				display: block;
+	 				margin: auto;
+				}
+
+				&::-ms-track {
+					 width: 100%;
+					 cursor: pointer;
+					 background: transparent;
+					 border-color: transparent;
+					 color: transparent;
+				}
+
 				&::-webkit-slider-thumb {
 					-webkit-appearance: none;
+					background: url(../img/tres.png) no-repeat center;
+					border: none;
+					width: 1.5rem;
+					height: 1.5rem;
+					cursor: pointer;
+					margin-bottom: 1.5rem;
+				}
+
+				&::-moz-range-thumb {
+					-moz-appearance: none;
+					background: url(../img/tres.png) no-repeat center;
+					border: none;
+					width: 1.5rem;
+					height: 1.5rem;
+					cursor: pointer;
+					margin-bottom: 1.5rem;
+				}
+
+				&::-ms-thumb {
+					-ms-appearance: none;
 					background: url(../img/tres.png) no-repeat center;
 					border: none;
 					width: 1.5rem;
